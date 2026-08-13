@@ -3,6 +3,18 @@
     "id": 1,
     "title": "Fazer sopa",
     "description": "frango, batatas, cenouras, xuxus, caldo de sopa",
+    "status": "DOING"
+  },
+  {
+    "id": 2,
+    "title": "Aprovar candidato para próxima etapa",
+    "description": "",
     "status": "TODO"
+  },
+  {
+    "id": 3,
+    "title": "Corrida Matinal",
+    "description": "1km 5:00 + 4km 4:30",
+    "status": "DONE"
   }
 ]

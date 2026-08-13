@@ -19,7 +19,9 @@ function App() {
 
   const [logs, setLogs] = useState([])
 
-  const addLog = (message, type = 'info') => {
+  const addLog = (message, type) => {
+    console.log(message)
+    console.log(type)
     const id = Date.now()
     setLogs(prev => [...prev, { id, message, type }])
     
@@ -59,8 +61,13 @@ function App() {
       })
       
       const statusName = newStatus === 'TODO' ? 'A Fazer' : newStatus === 'DOING' ? 'Em Progresso' : 'Concluída'
-      addLog(`"${taskTitle}" movida para ${statusName}!`, 'info')
-      
+
+      if (statusName == 'Concluída') {
+        addLog(`Parabéns! Tarefa "${taskTitle}" concluída!`, 'success')
+      }else{
+        addLog(`"${taskTitle}" movida para ${statusName}!`, 'info')
+      }
+
       fetchTasks()
     } catch (err) {
       console.error("Erro ao mover tarefa", err)
@@ -78,9 +85,9 @@ function App() {
   }
 
   const columns = {
-    TODO: { title: "A Fazer", items: tasks.filter(t => t.status === 'TODO'), icon: <ListTodo size = {20} strokeWidth = {2} /> },
-    DOING: { title: "Em Progresso", items: tasks.filter(t => t.status === 'DOING'), icon: <Rocket size = {20} strokeWidth = {2} /> },
-    DONE: { title: "Concluídas", items: tasks.filter(t => t.status === 'DONE'), icon: <CheckCircle size = {20} strokeWidth = {2} /> }
+    TODO: { title: "A Fazer", items: tasks.filter(t => t.status === 'TODO'), icon: <ListTodo size = {20} strokeWidth = {2} />, color: "bg-gray-600" },
+    DOING: { title: "Em Progresso", items: tasks.filter(t => t.status === 'DOING'), icon: <Rocket size = {20} strokeWidth = {2} />, color: "bg-yellow-300" },
+    DONE: { title: "Concluídas", items: tasks.filter(t => t.status === 'DONE'), icon: <CheckCircle size = {20} strokeWidth = {2} />, color: "bg-green-500" }
   }
 
   return (
@@ -121,9 +128,9 @@ function App() {
           <div key={status} className="flex flex-col">
             
             <h2 className="text-lg font-bold mb-4 flex items-center gap-2">
-              <span>{col.emoji}</span> {col.title}
-              <span className="bg-black text-white text-xs px-2 py-1 rounded-full ml-auto shadow-[2px_2px_0_#000]">
-                {col.items.length}
+              {col.title}
+              <span className={`bg-black text-white text-xs px-2 py-1 rounded-full ml-auto shadow-[2px_2px_0_#000] ${col.color}`} >
+                {col.items.length} 
               </span>
             </h2>
 

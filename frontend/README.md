@@ -1,16 +1,38 @@
-# React + Vite
+# Desafio Fullstack – Mini Kanban de Tarefas (React + Go)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Um sistema Kanban minimalista desenvolvido como resolução para o Desafio Fullstack, focando em simplicidade e código limpo.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Preview do Projeto](../docs/demonstration.png)
 
-## React Compiler
+## Executando o projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Rodando a API
+1. Navegue até a pasta do backend: `cd backend`
+2. Certifique-se de ter Golang(versão 1.22 usada) instalado.
+3. Inicie o servidor: `go run .`
+4. A API estará rodando em `http://localhost:8080`.
 
-## Expanding the ESLint configuration
+### 2. Rodando o Frontend
+1. Em outro CMD, navegue até a pasta do frontend: `cd frontend`
+2. Instale as dependências: `npm install`
+3. Inicie o servidor de desenvolvimento: `npm run dev`
+4. Acesse o programa no seu navegador `http://localhost:5173` e se divirta.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Decisões Técnicas
+
+*  Como o objetivo é demonstrar domínio dos fundamentos da linguagem, Optei por utilizar apenas bibliotecas built-in, sem a necessidade de frameworks externos. Os dados são armazenados em `backend/tasks.json`.
+*   **Design:** A interface usa bordas fortes, sombras sólidas, e um minimalismo inspirado no design do produto PostHog.
+
+## Limitações
+*   **Drag and Drop:** A movimentação das tasks atualmente acontece via botões, por ser mais acessível. A implementação de bibliotecas como `dnd-kit` traria uma fluidez maior.
+*   **DB:** A atual persistência em JSON atende perfeitamente ao MVP. Para um cenário de produção escalável, a substituição por SQLite ou PostgreSQL seria o próximo passo.
+
+## Documentação 
+
+### User Flow
+![User Flow do Mini Kanban](../docs/user_flow.png)
+
+### Data Flow
+
+![Data Flow do Mini Kanban](../docs/data_flow.png)
