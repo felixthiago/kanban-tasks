@@ -3,7 +3,7 @@
 
 Um sistema Kanban minimalista desenvolvido como resolução para o Desafio Fullstack, focando em simplicidade e código limpo.
 
-![Preview do Projeto](../docs/demonstration.png)
+![Preview do Projeto](./docs/demonstration.png)
 
 ## Executando o projeto
 
@@ -31,8 +31,8 @@ Um sistema Kanban minimalista desenvolvido como resolução para o Desafio Fulls
 ## Documentação 
 
 ### User Flow
-![User Flow do Mini Kanban](../docs/user_flow.png)
+![User Flow do Mini Kanban](./docs/user_flow.png)
 
 ### Data Flow
 
-![Data Flow do Mini Kanban](../docs/data_flow.png)
+![Data Flow do Mini Kanban](./docs/data_flow.png)
