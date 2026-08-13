@@ -1,0 +1,14 @@
+[
+  {
+    "ID": 2,
+    "title": "legs workout",
+    "description": "4x8 leg press",
+    "status": "TODO"
+  },
+  {
+    "ID": 3,
+    "title": "legs workout",
+    "description": "4x8 smith squat",
+    "status": "TODO"
+  }
+]
