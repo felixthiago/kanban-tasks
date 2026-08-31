@@ -1,7 +1,6 @@
-# Desafio Fullstack – Mini Kanban de Tarefas (React + Go)
+# Mini Kanban de Tarefas (React + Go)
 
-
-Um sistema Kanban minimalista desenvolvido como resolução para o Desafio Fullstack, focando em simplicidade e código limpo.
+Um sistema Kanban minimalista desenvolvido focando em simplicidade e código limpo.
 
 ![Preview do Projeto](./docs/demonstration.png)
 
@@ -21,7 +20,7 @@ Um sistema Kanban minimalista desenvolvido como resolução para o Desafio Fulls
 
 ## Decisões Técnicas
 
-*  Como o objetivo é demonstrar domínio dos fundamentos da linguagem, Optei por utilizar apenas bibliotecas built-in, sem a necessidade de frameworks externos. Os dados são armazenados em `backend/tasks.json`.
+*  Optei por utilizar apenas bibliotecas built-in, sem a necessidade de frameworks externos. Os dados são armazenados em `backend/tasks.json`.
 *   **Design:** A interface usa bordas fortes, sombras sólidas, e um minimalismo inspirado no design do produto PostHog.
 
 ## Limitações
